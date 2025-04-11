@@ -1,0 +1,34 @@
+name: Python application
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+    # - name: Install dependencies
+    #   run: |
+    #     python3 -m venv venv
+    #     source venv/bin/activate
+    #     pip install -r requirements.txt
+    - name: creating zip file
+      run: |
+        zip -q -r ~/deploy.zip . -x "venv/*" "raw_files/*" "web/static/images/*" && echo "success" || echo "failure"
+        zip -q -r ~/deploy.zip lambda_function.py && echo "success" || echo "failure"
+        cp ~/deploy.zip .
+    - name: AWS deploy
+      uses: appleboy/lambda-action@master
+      with:
+        aws_access_key_id: ${{ secrets.AWS_KEY }}
+        aws_secret_access_key: ${{ secrets.AWS_SECRET }}
+        aws_region: eu-central-1
+        function_name: DEMOCP-Prod
+        zip_file: ./deploy.zip
+        

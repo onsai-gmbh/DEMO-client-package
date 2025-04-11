@@ -1,0 +1,48 @@
+version: '3.5'
+services:
+  phonebot:
+    build: .
+    environment:
+      PYTHONUNBUFFERED: 1
+      AWS_ACCESS_KEY_ID: local
+      AWS_SECRET_ACCESS_KEY: host
+      AWS_DEFAULT_REGION: localhost
+      LOCAL_DYNAMO_DB_URL: http://dynamodb-local:8000
+      DYNAMO_DB_TABLE: demo
+    ports:
+      - "5000:5000"
+    command: uvicorn src.server:app --reload --host 0.0.0.0 --port 5000
+    volumes:
+      - .:/code
+  dynamodb-local:
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+  dynamodb-admin:
+    image: aaronshaf/dynamodb-admin
+    ports:
+      - "8001:8001"
+    environment:
+      DYNAMO_ENDPOINT: "http://dynamodb-local:8000"
+      AWS_REGION: "eu-central-1"
+      AWS_ACCESS_KEY_ID: local
+      AWS_SECRET_ACCESS_KEY: local
+    depends_on:
+    - dynamodb-local
+  ngrok:
+    image: wernight/ngrok:armhf
+    container_name: phonebot-ngrok
+    ports:
+      - 4040:4040
+    environment:
+      NGROK_PROTOCOL: http
+      NGROK_PORT: phonebot:5000
+      NGROK_SUBDOMAIN: jochen-onsai
+      NGROK_AUTH: 7UqRqLVMG5Z1rufgfvbS8_2PSDkefbjfdiuaaaaDkHi
+    depends_on:
+      - phonebot

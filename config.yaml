@@ -1,0 +1,88 @@
+# Default Language and Voice Settings
+speech:
+  default_language: "de-DE"  # Default language for voice interactions
+  default_voice: "de-DE-SeraphinaMultilingualNeural"  # Default voice model for text-to-speech
+
+# Database Configuration
+database:
+  table_name: ${DYNAMO_DB_TABLE}  # DynamoDB table name from environment
+  region: "eu-central-1"  # AWS region for DynamoDB
+  local:
+    enabled: false  # Set to true to use local DynamoDB instance
+    url: ${LOCAL_DYNAMO_DB_URL}  # Local DynamoDB endpoint URL
+    region: "localhost"  # Region for local DynamoDB
+  indexes:
+    caller_timestamp: "caller-timestamp-index"  # GSI name for caller timestamp tracking
+
+# Call Handling Configuration
+call:
+  whitelist:
+    - "+49911656544000"  # Numbers that get immediate transfer
+    - "0911656544000"
+  transfer:
+    default_extension: "800"  # Default extension for call transfers
+    sip_domain: "homaris.3cx.eu"  # SIP domain for transfers
+    target: "sip:800@homaris.3cx.eu"  # Full SIP transfer target
+  repeat_caller:
+    window_minutes: 5  # Time window to check for repeated calls
+    max_calls: 3  # Maximum number of calls allowed in the time window
+    transfer_message: 'Herzlich Willkommen bei <lang xml:lang="en-US">KONCEPT HOTEL International</lang>. Ich verbinde dich jetzt mit unserem Team. Bitte hab einen Moment Geduld.'  # Message played when call limit exceeded
+  timeout:
+    warning_threshold_seconds: 3  # Threshold for response time warnings
+    session_expiry_seconds: 60  # Default session expiry time
+    refresh_expiry_seconds: 360  # Session refresh expiry time
+
+# Voice Response Settings
+voice:
+  speech_rate: "+7%"  # Prosody rate for voice responses
+
+# API Endpoints
+api:
+  base_paths:
+    - "/onsei"
+    - "/"
+  conversation_paths:
+    activities: "/conversation/activities/"
+    refresh: "/conversation/refresh/"
+    disconnect: "/conversation/disconnect/"
+
+# Response Configuration
+response:
+  init_message: "initialized"  # Initial message status for new conversations
+  bot_response_format: "<speak><prosody rate=\"{speech_rate}\">{message}</prosody></speak>"  # Format for SSML responses 
+# Hotel information
+hotel_info:
+  hotel_brand: "ONSAI Hotels"  # Brand name for the hotel
+  properties: # hotel properties with ids if given
+      "B_smart_Motel_Schaan": null
+
+# Lambda Function Configuration
+lambda_client:
+  booking_function:
+    name: "DEMO-Booking" # Lambda function name for booking
+
+# Messaging Configuration
+microsoft_teams_channel:
+  webhook_url: "https://onsai.webhook.office.com/webhookb2/26484e92-ecdc-430a-be34-dc6f7eda4c72@b4fbe58b-de74-48d4-a087-a8a136e7c172/IncomingWebhook/48f416857b1747188c4e0a0233f12739/9fbebde3-6342-42b0-bfdd-d66ff1d6c123/V2hJSlY1dMzh-tYrbCCq5CCbhjm481tPrgZUAJD1CzmNw1"
+  success_message: "A new booking has been successfully created."
+  failure_message: "An error occurred while creating the booking."
+
+# Apaleo Configuration
+apaleo:   # TO DO: variables in api_connection 
+  apaleo_property_ids: # property ids for apaleo
+    default_id: "BER" # default property id
+  client_id: "VALV-SP-DEMO_BOOKING" # Client ID for Apaleo API 
+  promo_code: null # Promo code for booking, usually ONSAI/Onsai
+  rate_code: null # Rate code for APALEO if applicable
+  
+# Pinecone Configuration (Vector Database)
+pinecone:
+  index_name: "demo-test" # Pinecone index name
+  environment: "eu-west4-gcp" # Pinecone environment
+
+# Country Configuration/ Timezone Settings
+timezone_settings:
+  default_timezone: "Europe/Berlin" # Default timezone for the application
+
+bot:
+  name: "Sora" # Name of the bot

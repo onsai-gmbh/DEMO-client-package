@@ -1,0 +1,14 @@
+openai
+python-dotenv
+pinecone-client==2.2.4
+apig-wsgi==2.10.0
+sentry-sdk
+pytz
+boto3
+fastapi 
+uvicorn
+rapidfuzz
+mangum
+pydantic
+azure-ai-inference # for azure llama
+twilio
