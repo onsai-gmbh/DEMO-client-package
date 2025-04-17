@@ -26,7 +26,7 @@ call:
   repeat_caller:
     window_minutes: 5  # Time window to check for repeated calls
     max_calls: 3  # Maximum number of calls allowed in the time window
-    transfer_message: 'Herzlich Willkommen bei <lang xml:lang="en-US">KONCEPT HOTEL International</lang>. Ich verbinde dich jetzt mit unserem Team. Bitte hab einen Moment Geduld.'  # Message played when call limit exceeded
+    transfer_message: 'Herzlich Willkommen bei <lang xml:lang="en-US">Onsai HOTEL International</lang>. Ich verbinde dich jetzt mit unserem Team. Bitte hab einen Moment Geduld.'  # Message played when call limit exceeded
   timeout:
     warning_threshold_seconds: 3  # Threshold for response time warnings
     session_expiry_seconds: 60  # Default session expiry time
@@ -54,7 +54,7 @@ response:
 hotel_info:
   hotel_brand: "ONSAI Hotels"  # Brand name for the hotel
   properties: # hotel properties with ids if given
-      "B_smart_Motel_Schaan": null
+    "Stuttgart": null
 
 # Lambda Function Configuration
 lambda_client:
@@ -73,7 +73,7 @@ apaleo:   # TO DO: variables in api_connection
     default_id: "BER" # default property id
   client_id: "VALV-SP-DEMO_BOOKING" # Client ID for Apaleo API 
   promo_code: null # Promo code for booking, usually ONSAI/Onsai
-  rate_code: null # Rate code for APALEO if applicable
+  rate_plan: null # Rate code for APALEO if applicable
   
 # Pinecone Configuration (Vector Database)
 pinecone:

@@ -100,7 +100,7 @@ def confidence_score_filter(responses):
 
     for result in responses["results"]:
         # Matches to keep
-        responses = [(match["metadata"]["text"], match["metadata"]["location"], match["metadata"]["unique"], match["score"]) for match in result["matches"] if match["score"] > 0.5] # 0.8 
+        responses = [(match["metadata"]["text"], match["metadata"]["location"], match["metadata"]["uniqe"], match["score"]) for match in result["matches"] if match["score"] > 0.5] # 0.8 
         # If no results with confidence score > 0.5, return an empty Paragraph
         if len(responses) == 0:
             responses = [(' ', None, False)]
