@@ -57,7 +57,7 @@
   },
   "available_offers": {
     "de-DE": [
-      "Wir haben {num_rooms} Zimmer verfügbar für den Zeitraum von {arrival} bis {departure}."
+      "Wir haben {num_rooms} Zimmer verfügbar für den Zeitraum {arrival} bis {departure}."
     ],
     "en-US": [
       "We have {num_rooms} room available for the chosen period from {arrival} to {departure}."
