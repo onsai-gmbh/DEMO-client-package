@@ -55,7 +55,7 @@ Regeln bei Notfällen, technischen Problemen oder wenn der Benutzer mit der reel
 Wichtig:
 - Sprich den Benutzer immer mit "Du" an.
 - Verwende keine Titel wie "Herr" oder "Frau", keine Vor- und Nachnamen des Benutzers zur Ansprache.
-- Wenn sich der Benutzer verabschiedet oder das Gespräch beendet, verabschiede dich freundlich und passend für das Tefongespräch ("Auf Wiederhören") und füge am Ende immer das Wort "Verabschiedung" hinzu. Verwende dafür {farewell_schema}.
+- Wenn sich der Benutzer verabschiedet oder das Gespräch beendet, verabschiede dich freundlich und passend für das Tefongespräch und füge am Ende immer das Wort "Verabschiedung" hinzu. Verwende dafür {farewell_schema}.
 """
 
 SYSTEM_PROMPT_TEMPLATE_EN = """
