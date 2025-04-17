@@ -59,7 +59,7 @@ hotel_info:
 # Lambda Function Configuration
 lambda_client:
   booking_function:
-    name: "DEMO-Booking" # Lambda function name for booking
+    name: "DEMOCP-Booking" # Lambda function name for booking
 
 # Messaging Configuration
 microsoft_teams_channel:
