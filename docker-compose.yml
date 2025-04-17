@@ -42,7 +42,7 @@ services:
     environment:
       NGROK_PROTOCOL: http
       NGROK_PORT: phonebot:5000
-      NGROK_SUBDOMAIN: jochen-onsai
-      NGROK_AUTH: 7UqRqLVMG5Z1rufgfvbS8_2PSDkefbjfdiuaaaaDkHi
+      NGROK_SUBDOMAIN: mcdreams-audiocodes1
+      NGROK_AUTH: 2qIihHz7cOFpZ88I3cS57FJeB3f_2Z9LM7YxMDGrw2yggc2zo
     depends_on:
       - phonebot

@@ -222,7 +222,8 @@ async def capture_activitie(conversation_id: str, request: Request):
         properties = config.get("hotel_info", {}).get("properties", {})
         # Get the hotel name based on the get_id value
         property_name = next((hotel_name for hotel_name, id_value in properties.items() if id_value == get_id and get_id != None), None)
-        property_name = "B_smart_Motel_Schaan" 
+        property_name = "Stuttgart" 
+
         table.put_item(Item={'id': conversation_id, 'messages': config["response"]["init_message"], "system_history": [], "timestamp": timestamp, "property_name": property_name, "caller": caller, "booking_data": booking_data, "voice_name": VOICE_NAME})
         bot_response = get_ai_prompt_template() # get the German AI prompt
 
