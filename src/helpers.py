@@ -602,7 +602,7 @@ def enhance_pronunciation(text, language):
         words = [
             "tanke", "Blaubach", "Waidmarkt", "hallo", "Vringsveedel", "Barbarossaplatz", "Poststraße",
             "Messe Deutz", "Blocklemünd", "Pragfriedhof", "Rhein", "Stadium", "Neumarkt", "Severinstraße", 
-            "Rewe", "Airbnb", 
+            "Rewe", "Airbnb", "Himmelstraße", 
             ]
         pronunciation_lang = 'de-DE'
     elif language == 'de-DE':
