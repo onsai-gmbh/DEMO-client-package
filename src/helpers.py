@@ -547,11 +547,11 @@ def enhance_pronunciation(text, language):
                     spoken_time = f"{hour % 12 or 12}:{time_obj.minute:02} {'PM' if hour >= 12 else 'AM'}"
                 elif "Uhr" in marker:
                     time_obj = datetime.strptime(time_str.strip(), '%H.%M' if '.' in time_str else '%H:%M').time()
-                    spoken_time = f"{time_obj.hour} Uhr {time_obj.minute}" if time_obj.minute else f"{time_obj.hour} Uhr"
+                    spoken_time = f"{time_obj.hour}:{time_obj.minute}" if time_obj.minute else f"{time_obj.hour}"
                 else:
                     time_obj = datetime.strptime(time_str.strip(), '%H.%M' if '.' in time_str else '%H:%M').time()
                     if language == 'de-DE':
-                        spoken_time = f"{time_obj.hour} Uhr {time_obj.minute}" if time_obj.minute else f"{time_obj.hour} Uhr"
+                        spoken_time = f"{time_obj.hour}:{time_obj.minute}" if time_obj.minute else f"{time_obj.hour}"
                     else:
                         spoken_time = time_obj.strftime("%I:%M %p").lstrip('0')
                         if spoken_time.endswith(":00"):
@@ -602,13 +602,13 @@ def enhance_pronunciation(text, language):
         words = [
             "tanke", "Blaubach", "Waidmarkt", "hallo", "Vringsveedel", "Barbarossaplatz", "Poststraße",
             "Messe Deutz", "Blocklemünd", "Pragfriedhof", "Rhein", "Stadium", "Neumarkt", "Severinstraße", 
-            "Rewe", "Airbnb", 
+            "Rewe", "Airbnb", "Himmelstraße", 
             ]
         pronunciation_lang = 'de-DE'
     elif language == 'de-DE':
         # English words to be pronounced as English words in German
         words = ["Suites", "Late", "Early", "Flexible", "Bumbee", "Call a bike", "nextbike", "Do-not-disturb", 
-                 "King-Size", "quality", "Dream", "KONCEPT", "koncept", "Hi", 'Hey']
+                 "King-Size", "quality", "Dream", "KONCEPT", "koncept", "Hi", 'Hey', "WhatsApp"]
         pronunciation_lang = 'en-US'
 
     # Wrap the entire text in a default language tag

@@ -1,115 +1,114 @@
 {
   "welcome_message": {
-      "de-DE": [
-        "Hi und Herzlich Willkommen im onsai HOTEL International, ich bin sora! Was kann ich für dich tun?",
-        "Hallo! sora hier – wie darf ich dir helfen?",
-        "Hey und Herzlich Willkommen im onsai HOTEL International, ich bin sora. Was kann ich für dich erledigen?",
-        "Servus im onsai HOTEL International! sora am Apparat – wie kann ich dir behilflich sein?",
-        "Hallo im onsai HOTEL International! Ich bin sora. Wobei darf ich unterstützen?",
-        "Hi im onsai HOTEL International! sora hier. Was steht an?",
-        "Hallo im onsai HOTEL International, ich bin sora! Wie darf ich dir weiterhelfen?",
-        "Hi im onsai HOTEL International, hier ist sora. Wie kann ich dich unterstützen?",
-        "Servus im onsai HOTEL International! Ich bin sora – was kann ich für dich tun?"
-      ],
-      "en-US": [
-        "Hi and a warm welcome to onsai HOTEL International, I’m sora! What can I do for you?",
-        "Hello! sora here – how can I help you today?",
-        "Hey and welcome to onsai HOTEL International, I’m sora. What can I do for you?",
-        "Servus at onsai HOTEL International! sora speaking – how can I assist you?",
-        "Hello at onsai HOTEL International! I’m sora. How may I help you?",
-        "Hi at onsai HOTEL International! sora here. What’s up?",
-        "Hello at onsai HOTEL International, I’m sora! How can I assist you?",
-        "Hi at onsai HOTEL International, this is sora. How can I help you?",
-        "Servus at onsai HOTEL International! I’m sora – what can I do for you today?"
-      ]
-    },
-    "service_hotline_open": {
-      "de-DE": [
-        "Gerne hilft Dir unser Team weiter. Ich verbinde Dich jetzt mit unserer Service-Hotline. Bitte hab einen Moment Geduld. Vielen Dank und bis bald!"
-      ],
-      "en-US": [
-        "My team will be happy to help you. I will connect you to our service hotline now. Thank you and see you soon!"
-      ]
-    },
-    "no_property_found": {
-      "de-DE": [
-        "Ich habe nicht verstanden, welchen Standort du meinst. Könntest Du bitte nochmal versuchen?"
-      ],
-      "en-US": [
-        "I didn’t understand which location you mean. Could you please try again?"
-      ]
-    },
-    "which_property_name": {
-      "de-DE": [
-        "Welchen Standort meinst Du? Bitte nenne mir den Namen des Standorts."
-      ],
-      "en-US": [
-        "Which location do you mean? Please tell me the name of the location."
-      ]
-    },
-    "booking_error": {
-      "de-DE": [
-        "Es ist ein Fehler mit dem Buchungssystem aufgetreten. Bitte gib die Buchung erneut an."
-      ],
-      "en-US": [
-        "There was an issue with the booking system. Please try the booking again."
-      ]
-    },
-    "available_offers": {
-      "de-DE": [
-        "Wir haben {num_rooms} Zimmer verfügbar für den Zeitraum von {arrival} bis {departure}."
-      ],
-      "en-US": [
-        "We have {num_rooms} room available for the chosen period from {arrival} to {departure}."
-      ]
-    },
-    "offer_selection": {
-      "de-DE": [
-        "Möchtest Du die Buchung bestätigen?"
-      ],
-      "en-US": [
-        "Would you like to confirm the booking?"
-      ]
-    },
-    "no_available_offers": {
-      "de-DE": [
-        "Leider haben wir keine Zimmer verfügbar für den Zeitraum von {arrival} bis {departure}. Bitte gib die Buchung erneut an."
-      ],
-      "en-US": [
-        "Unfortunately, we have no rooms available for the period from {arrival} to {departure}. Please try the booking again."
-      ]
-    },
-    "booking_confirmation": {
-      "de-DE": [
-        "Ich habe das Zimmer für Dich gebucht. Vielen Dank für Deine Buchung. Du erhältst in Kürze eine Buchungsbestätigung per WhatsApp. Bitte überprüfe Deine Daten während des digitalen Check-ins auf Richtigkeit und korrigiere sie gegebenenfalls. Wie kann ich Dir sonst noch behilflich sein?"
-      ],
-      "en-US": [
-        "I have booked the room for you. Thank you for your booking. You will receive your booking confirmation via WhatsApp shortly. Please check your data during your digital check-in for correctness and change it if necessary. How else can I help you?"
-      ]
-    },
-    "booking_not_confirmed": {
-      "de-DE": [
-        "Alles klar, die Buchung wurde nicht bestätigt. Wie kann ich Dir sonst noch behilflich sein?"
-      ],
-      "en-US": [
-        "Alright, the booking was not confirmed. How else can I help you?"
-      ]
-    },
-    "confirm_phone_number": {
-      "de-DE": [
-        "Kann eine WhatsApp-Nachricht mit der Buchungsbestätigung an die erkannte Rufnummer gesendet werden oder möchtest Du eine andere Nummer angeben?"
-      ],
-      "en-US": [
-        "Can a WhatsApp message with the booking confirmation be sent to the recognized phone number or would you like to provide another number?"
-      ]
-    },
-    "phone_number_confirmation_required": {
-      "de-DE": [
-        "Die folgende Telefonnummer wurde erkannt: {phone_number}. Kannst Du bitte bestätigen, dass eine WhatsApp-Nachricht mit der Buchungsbestätigung an diese Nummer gesendet werden kann?"
-      ],
-      "en-US": [
-        "The following phone number was recognized: {phone_number}. Can you please confirm that a WhatsApp message with the booking confirmation can be sent to this number?"
-      ]
-    }
+    "de-DE": [
+      "Hi und Herzlich Willkommen im onsai HOTEL International, ich bin sora! Was kann ich für dich tun?",
+      "Hallo! sora hier – wie darf ich dir helfen?",
+      "Hey und Herzlich Willkommen im onsai HOTEL International, ich bin sora. Was kann ich für dich erledigen?",
+      "Servus im onsai HOTEL International! sora am Apparat – wie kann ich dir behilflich sein?",
+      "Hallo im onsai HOTEL International! Ich bin sora. Wobei darf ich unterstützen?",
+      "Hi im onsai HOTEL International! sora hier. Was steht an?",
+      "Hallo im onsai HOTEL International, ich bin sora! Wie darf ich dir weiterhelfen?",
+      "Hi im onsai HOTEL International, hier ist sora. Wie kann ich dich unterstützen?",
+      "Servus im onsai HOTEL International! Ich bin sora – was kann ich für dich tun?"
+    ],
+    "en-US": [
+      "Hi and a warm welcome to onsai HOTEL International, I’m sora! What can I do for you?",
+      "Hello! sora here – how can I help you today?",
+      "Hey and welcome to onsai HOTEL International, I’m sora. What can I do for you?",
+      "Servus at onsai HOTEL International! sora speaking – how can I assist you?",
+      "Hello at onsai HOTEL International! I’m sora. How may I help you?",
+      "Hi at onsai HOTEL International! sora here. What’s up?",
+      "Hello at onsai HOTEL International, I’m sora! How can I assist you?",
+      "Hi at onsai HOTEL International, this is sora. How can I help you?",
+      "Servus at onsai HOTEL International! I’m sora – what can I do for you today?"
+    ]
+  },
+  "service_hotline_open": {
+    "de-DE": [
+      "Gerne hilft dir unser Team weiter. Ich verbinde dich jetzt mit unserer Service-Hotline. Bitte hab einen Moment Geduld. Vielen Dank und bis bald!"
+    ],
+    "en-US": [
+      "My team will be happy to help you. I will connect you to our service hotline now. Thank you and see you soon!"
+    ]
+  },
+  "no_property_found": {
+    "de-DE": [
+      "Ich habe nicht verstanden, welchen Standort du meinst. Könntest du bitte nochmal versuchen?"
+    ],
+    "en-US": [
+      "I didn’t understand which location you mean. Could you please try again?"
+    ]
+  },
+  "which_property_name": {
+    "de-DE": [
+      "Welchen Standort meinst du? Bitte nenne mir den Namen des Standorts."
+    ],
+    "en-US": [
+      "Which location do you mean? Please tell me the name of the location."
+    ]
+  },
+  "booking_error": {
+    "de-DE": [
+      "Es ist ein Fehler mit dem Buchungssystem aufgetreten. Bitte gib die Buchung erneut an."
+    ],
+    "en-US": [
+      "There was an issue with the booking system. Please try the booking again."
+    ]
+  },
+  "available_offers": {
+    "de-DE": [
+      "Wir haben {num_rooms} Zimmer verfügbar für den Zeitraum {arrival} bis {departure}."
+    ],
+    "en-US": [
+      "We have {num_rooms} room available for the chosen period from {arrival} to {departure}."
+    ]
+  },
+  "offer_selection": {
+    "de-DE": [
+      "Möchtest du die Buchung bestätigen?"
+    ],
+    "en-US": [
+      "Would you like to confirm the booking?"
+    ]
+  },
+  "no_available_offers": {
+    "de-DE": [
+      "Leider haben wir keine Zimmer verfügbar für den Zeitraum von {arrival} bis {departure}. Bitte gib die Buchung erneut an."
+    ],
+    "en-US": [
+      "Unfortunately, we have no rooms available for the period from {arrival} to {departure}. Please try the booking again."
+    ]
+  },
+  "booking_confirmation": {
+    "de-DE": [
+      "Ich habe das Zimmer für dich gebucht. Vielen Dank für deine Buchung. Du erhältst in Kürze eine Buchungsbestätigung per WhatsApp. Bitte überprüfe deine Daten während des digitalen Check-ins auf Richtigkeit und korrigiere sie gegebenenfalls. Wie kann ich dir sonst noch behilflich sein?"
+    ],
+    "en-US": [
+      "I have booked the room for you. Thank you for your booking. You will receive your booking confirmation via WhatsApp shortly. Please check your data during your digital check-in for correctness and change it if necessary. How else can I help you?"
+    ]
+  },
+  "booking_not_confirmed": {
+    "de-DE": [
+      "Alles klar, die Buchung wurde nicht bestätigt. Wie kann ich dir sonst noch behilflich sein?"
+    ],
+    "en-US": [
+      "Alright, the booking was not confirmed. How else can I help you?"
+    ]
+  },
+  "confirm_phone_number": {
+    "de-DE": [
+      "Kann eine WhatsApp-Nachricht mit der Buchungsbestätigung an die erkannte Rufnummer gesendet werden oder möchtest du eine andere Nummer angeben?"
+    ],
+    "en-US": [
+      "Can a WhatsApp message with the booking confirmation be sent to the recognized phone number or would you like to provide another number?"
+    ]
+  },
+  "phone_number_confirmation_required": {
+    "de-DE": [
+      "Die folgende Telefonnummer wurde erkannt: {phone_number}. Kannst du bitte bestätigen, dass eine WhatsApp-Nachricht mit der Buchungsbestätigung an diese Nummer gesendet werden kann?"
+    ],
+    "en-US": [
+      "The following phone number was recognized: {phone_number}. Can you please confirm that a WhatsApp message with the booking confirmation can be sent to this number?"
+    ]
   }
-  
+}

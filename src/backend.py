@@ -58,7 +58,8 @@ async def background_task(booking_data, offers):
             int(booking_data["number_of_adults"])
         )
         print("Booking data: ", fill_booking_data)
-        booking_response = await create_booking(fill_booking_data)
+        # booking_response = await create_booking(fill_booking_data)
+        booking_response = create_booking(fill_booking_data)
         booking_id = booking_response.get('id')
         description = f"Payment link for booking {booking_id}"
         country_code = "DE"

@@ -13,11 +13,12 @@ from bot_embeddings import get_embeddings_sync
 import re
 import sys
 import yaml
+
 load_dotenv()
 pinecone_api_key = os.getenv('PINECONE_API_KEY')
 pinecone_environment = os.getenv('PINECONE_ENVIRONMENT')
 #pinecone_index = os.getenv('PINECONE_INDEX')
-pinecone_index = "koncept-test"
+pinecone_index = "demo-test"
 with open("config.yaml", "r") as f:
     config = yaml.safe_load(f)
 
@@ -37,10 +38,10 @@ def process_data(file_path, batch_size=100):
     print("Using Index: " + str(pinecone_index))
     print("Waiting 10s")
     time.sleep(10)
-    print("Deleting index")
-    pinecone.delete_index(pinecone_index)
-    print("Waiting 10s")
-    time.sleep(10)
+    # print("Deleting index")
+    # pinecone.delete_index(pinecone_index)
+    # print("Waiting 10s")
+    # time.sleep(10)
     print("Creating index")
     pinecone.create_index(pinecone_index, dimension=1536, pod_type="s1")
     print("Waiting 10s")
@@ -53,7 +54,7 @@ def process_data(file_path, batch_size=100):
         df.columns = [col.lower() for col in df.columns]
 
         # Rename columns to simplify access
-        frage_col = next((c for c in df.columns if "frage" in c), None)
+        frage_col = next((c for c in df.columns if "frage von onsai ergänzt" in c), None)
         spezifisch_col = next((c for c in df.columns if "spezifisch" in c), None)
         zur_bearbeitung_col = next((c for c in df.columns if "zur bearbeitung" in c), None)
 
@@ -124,4 +125,4 @@ def process_data(file_path, batch_size=100):
                 continue
 
 if __name__ == "__main__":
-    process_data("./data/KONCE_FAQ_08.04.2025.xlsx")
+    process_data("./data/Demo_FAQ.xlsx")
